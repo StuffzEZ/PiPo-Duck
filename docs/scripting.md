@@ -1,1 +1,1 @@
-# LEARN: Scripting
+# Scripting
