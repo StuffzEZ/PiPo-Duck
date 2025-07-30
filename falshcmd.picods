@@ -1,0 +1,21 @@
+#T> Flashing CMD
+#D> Opens cmd and changes background color rapidly
+
+DELAY 500
+GUI r
+DELAY 300
+STRING cmd
+ENTER
+DELAY 300
+STRING :loop
+ENTER
+STRING color a
+ENTER
+STRING color b
+ENTER
+STRING color c
+ENTER
+STRING color d
+ENTER
+STRING goto loop
+ENTER
