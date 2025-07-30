@@ -6,7 +6,8 @@
 for /F "delims=" %%A in ('echo prompt $E ^| cmd') do set "ESC=%%A"
 
 cls
-echo %ESC%[31mRead the Pop Up%ESC%[0m
+color 4
+echo %ESC%Read the Pop Up%ESC%
 
 :: -------------------------------
 :: Create temporary VBScript for popup
