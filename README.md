@@ -1,3 +1,5 @@
+# NEVER MERGE THE BRANCHES
+
 # PLEASE READ /docs/index.md for new README
 
 # Pico WiFi Duck - Raspberry Pi Pico W
