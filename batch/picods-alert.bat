@@ -1,13 +1,7 @@
 @echo off
-:: Enable ANSI escape sequences (Windows 10+)
-:: Clear the screen and print red text
-
-:: Use prompt trick to get ESC char into variable
-for /F "delims=" %%A in ('echo prompt $E ^| cmd') do set "ESC=%%A"
-
 cls
 color 4
-echo Rread the Pop Up!
+echo Read the Pop Up!
 
 :: -------------------------------
 :: Create temporary VBScript for popup
