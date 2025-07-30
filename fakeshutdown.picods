@@ -1,0 +1,11 @@
+#T> Fake Shutdown
+#D> Simulates a shutdown warning using msg command
+
+DELAY 500
+GUI r
+DELAY 300
+STRING cmd
+ENTER
+DELAY 300
+STRING msg * /time:30 /v PiPo Ducky has detected suspicious activity. System will shutdown in 30 seconds.
+ENTER
