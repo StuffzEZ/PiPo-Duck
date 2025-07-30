@@ -1,4 +1,3 @@
-# PiPo Ducky
 A New Powerful Raspberry Pi Pico W Rubber Ducky
 
 ## Features
@@ -8,7 +7,7 @@ With script loading, you can put `.picods` scripts in the /scripts folder of the
 ### Web GUI
 You can control the PiPo ducky from the web GUI.
 ### Easy To Learn
-The `picod` scripting language is easy to learn. Learn it [here](https://stuffzez.github.io/PiPo-Duck/scripting)
+The `picod` scripting language is easy to learn. Learn it [here](https://stuffzez.github.io/PiPo-Ducky/scripting)
 ### AND SO MUCH MORE! (i just cant be bothered to put it all here srry)
 
 ## How to install
