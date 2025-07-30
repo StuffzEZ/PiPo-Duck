@@ -1,0 +1,11 @@
+#T> Fake Update
+#D> Opens full-screen browser to a fake Windows 11 update page
+
+DELAY 500
+GUI r
+DELAY 300
+STRING cmd
+ENTER
+DELAY 500
+STRING start msedge --start-fullscreen https://www.whitescreen.online/fake-windows-11-update-screen/
+ENTER
