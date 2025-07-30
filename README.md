@@ -1,3 +1,5 @@
+# PLEASE READ /docs/index.md for new README
+
 # Pico WiFi Duck - Raspberry Pi Pico W
 
 ![Raspberry Pi Pico W](https://cdn.mos.cms.futurecdn.net/Xmn9ztSwKavDfzgX6x3g4g.jpg)

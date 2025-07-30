@@ -25,3 +25,6 @@ PASSWORD: ppod_430d
 6) Execute your scripts via the Web GUI
 
 # [Styling Not Quite Right? Click here](https://stuffzez.github.io/PiPo-Ducky/index)
+
+## NOTE: To show the drive after re-booting the device, connect the pins marked with red below
+![alt text](image.png)
