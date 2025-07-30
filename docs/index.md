@@ -15,7 +15,7 @@ The `picod` scripting language is easy to learn. Learn it [here](https://stuffze
 1) Download the latest version of [CircuitPython](https://circuitpython.org) in your lanuguage.
 2) Hold the BOOT button on your Pico W and plug it into your computer
 3) Drag the `.uf2` CircuitPython file into the drive
-4) A New CircuitPy drive should popup with files inside. Drag all the files from the ZIP file that is the latest release on this GitHub for your model
+4) A New CircuitPy drive should popup with files inside. Drag all the files from the ZIP file (you can delete the CIRCUITPY files that are already there if u want :) ) that is the latest release on this GitHub for your model
 5) Join the WiFi network
 ```
 SSID/NAME: PiPo_Ducky
