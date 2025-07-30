@@ -21,5 +21,5 @@ The `picod` scripting language is easy to learn. Learn it [here](https://stuffze
 SSID/NAME: PiPo_Ducky
 PASSWORD: ppod_430d
 ```
-6) Go to 192.168.1.4
+6) Go to `192.168.4.1`
 6) Execute your scripts via the Web GUI
