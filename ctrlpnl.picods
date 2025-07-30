@@ -1,0 +1,8 @@
+#T> Control Panel
+#D> Opens classic Windows Control Panel
+
+DELAY 500
+GUI r
+DELAY 300
+STRING control
+ENTER
