@@ -1,0 +1,8 @@
+#T> System Info
+#D> Opens Windows System Properties dialog
+
+DELAY 500
+GUI r
+DELAY 300
+STRING sysdm.cpl
+ENTER
