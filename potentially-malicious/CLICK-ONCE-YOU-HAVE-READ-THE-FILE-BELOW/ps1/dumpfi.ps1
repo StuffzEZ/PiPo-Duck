@@ -9,15 +9,23 @@ $result = [System.Windows.Forms.MessageBox]::Show(
 if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
     $timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
     $pcname = $env:COMPUTERNAME
-    $outputPath = "D:\dumpfi\$timestamp-$pcname.dfi22"
+    $folder = "D:\dumpfi"
+    if (-not (Test-Path $folder)) {
+        New-Item -Path $folder -ItemType Directory | Out-Null
+    }
+    $outputPath = "$folder\$timestamp-$pcname.dfi22"
+
     $profiles = netsh wlan show profiles
     foreach ($line in $profiles) {
         if ($line -match "All User Profile\s*:\s*(.+)") {
             $name = $matches[1].Trim()
             $details = netsh wlan show profile name="$name" key=clear
-            $pw = ($details | Select-String "Key Content").ToString().Split(":")[1].Trim()
-            if ($pw) {
-                Add-Content -Path $outputPath -Value "$name : $pw"
+            $keyContentLine = $details | Select-String "Key Content"
+            if ($keyContentLine) {
+                $pw = $keyContentLine.ToString().Split(":")[1].Trim()
+                if ($pw) {
+                    Add-Content -Path $outputPath -Value "$name : $pw"
+                }
             }
         }
     }
