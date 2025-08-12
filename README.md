@@ -1,3 +1,6 @@
+# PiPo Ducky 
+Want something to do with your raspberry pi Pico W? Heres a solution!
+
 # NEVER MERGE THE BRANCHES
 
 # PLEASE READ /docs/index.md for new README
